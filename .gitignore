@@ -28,3 +28,10 @@ build/
 .env
 .env.local
 .env.*.local
+
+# msg-monitor - sensitive/runtime files
+msg-monitor/cookies.txt
+msg-monitor/last_state.json
+msg-monitor/*.zip
+msg-monitor/portable-xky/cookies.txt
+msg-monitor/portable-xky/last_state.json
