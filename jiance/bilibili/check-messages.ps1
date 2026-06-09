@@ -5,7 +5,7 @@
         Add-Type -AssemblyName System.Runtime.WindowsRuntime
         $null = [Windows.UI.Notifications.ToastNotificationManager, Windows.UI.Notifications, ContentType = WindowsRuntime]
         $null = [Windows.Data.Xml.Dom.XmlDocument, Windows.Data.Xml.Dom.XmlDocument, ContentType = WindowsRuntime]
-        $xmlText = '<?xml version="1.0" encoding="utf-8"?><toast scenario="reminder"><visual><binding template="ToastGeneric"><text>' + $Title + '</text><text>' + $Message + '</text></binding></visual><actions><action content="open" arguments="' + $TargetUrl + '" activationType="protocol"/></actions></toast>'
+        $xmlText = '<?xml version="1.0" encoding="utf-8"?><toast scenario="reminder"><visual><binding template="ToastGeneric"><text>' + [System.Security.SecurityElement]::Escape($Title) + '</text><text>' + [System.Security.SecurityElement]::Escape($Message) + '</text></binding></visual><actions><action content="open" arguments="' + $TargetUrl + '" activationType="protocol"/></actions></toast>'
         $doc = New-Object Windows.Data.Xml.Dom.XmlDocument
         $doc.LoadXml($xmlText)
         $notifier = [Windows.UI.Notifications.ToastNotificationManager]::CreateToastNotifier("MessageMonitor")
