@@ -158,7 +158,7 @@ if (-not $cookieExpired) {
     $hasSession = [regex]::IsMatch($pageContent, '"session_list"\\s*:')
     $hasData = [regex]::IsMatch($pageContent, '"data"\\s*:')
     if (-not $hasSession -and -not $hasData) {
-        Write-Warning "响应缺少消息数据，Cookie 可能已失效
+        Write-Warning "响应缺少消息数据，Cookie 可能已失效"
         $cookieExpired = $true
     }
 }
