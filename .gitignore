@@ -29,13 +29,11 @@ build/
 .env.local
 .env.*.local
 
-# msg-monitor - sensitive/runtime files
-msg-monitor/cookies.txt
-msg-monitor/last_state.json
-msg-monitor/*.zip
-msg-monitor/portable-xky/cookies.txt
-msg-monitor/portable-xky/last_state.json
-
-# msg-monitor root runtime files (local only, not in git)
-/cookies.txt
-/last_state.json
+# jiance - sensitive/runtime files (local only)
+jiance/xky/cookies.txt
+jiance/xky/last_state.json
+jiance/xky/*.zip
+jiance/xky/portable-xky/cookies.txt
+jiance/xky/portable-xky/last_state.json
+jiance/bilibili/cookies.txt
+jiance/bilibili/last_state.json

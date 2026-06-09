@@ -1,0 +1,16 @@
+﻿{
+    "url":  "https://api.vc.bilibili.com/session_svr/v1/session_svr/new_sessions?begin_ts=TIMESTAMP\u0026build=0\u0026mobi_app=web\u0026web_location=333.40164\u0026w_rid=SIGN\u0026wts=TIME",
+    "check_interval_minutes":  10,
+    "cookie_file":  "cookies.txt",
+    "state_file":  "last_state.json",
+    "content_regex":  "",
+    "valid_indicator":  "\"code\"",
+    "login_indicator":  "账号未登录",
+    "app_name":  "B站消息监控",
+    "http_method":  "GET",
+    "http_headers":  {
+                         "Referer":  "https://message.bilibili.com/",
+                         "Origin":  "https://message.bilibili.com"
+                     },
+    "http_body":  ""
+}
