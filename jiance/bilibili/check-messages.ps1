@@ -153,14 +153,6 @@ if (-not $cookieExpired) {
         catch {}
     }
 }
-# 额外保护: 如果 session_list 或 data 字段缺失，可能是 Cookie 已失效
-if (-not $cookieExpired) {
-    $hasSession = [regex]::IsMatch($pageContent, '"session_list"\\s*:')
-    $hasData = [regex]::IsMatch($pageContent, '"data"\\s*:')
-    if (-not $hasSession -and -not $hasData) {
-        Write-Warning "响应缺少消息数据，Cookie 可能已失效"
-        $cookieExpired = $true
-    }
 }
 
 if ($cookieExpired) {
