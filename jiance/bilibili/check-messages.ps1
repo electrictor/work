@@ -153,7 +153,6 @@ if (-not $cookieExpired) {
         catch {}
     }
 }
-}
 
 if ($cookieExpired) {
     $now = Get-Date -Format 'yyyy-MM-dd HH:mm:ss'
